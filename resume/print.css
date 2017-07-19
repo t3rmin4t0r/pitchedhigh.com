@@ -1,0 +1,56 @@
+/* Resume */
+
+@page {
+  size: 8.5in 11in;/* width height */
+}
+
+html {
+	margin: 0;
+	padding: 0;
+}
+body.hresume {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+a {
+	background-color: inherit;
+	color: #000;
+	text-decoration: none;
+}
+h2, h3 {
+	page-break-after: avoid;
+}
+li.job {
+	page-break-inside: avoid;
+}
+li.experience {
+	page-break-inside: avoid;
+}
+ul.skills {
+	page-break-before: avoid;
+}
+
+a {
+	border: 0px solid #ccc;
+	text-decoration: none;
+	color: #777;
+}
+
+div.period {
+	border: 0px solid #ccc;
+}
+
+.displayable {
+	display: none;
+}
+
+.printable {
+	display: inline;
+}
+
+p.description {
+	display: block;
+}
+

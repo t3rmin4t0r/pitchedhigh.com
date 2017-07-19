@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^thingamajigs\.pitchedhigh\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.thingamajigs\.pitchedhigh\.com$
+RewriteRule ^/?$ "http\:\/\/thingamajigs\.org\/" [R=301,L]
+

@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^blog\.pitchedhigh\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.blog\.pitchedhigh\.com$
+RewriteRule ^/?$ "https\:\/\/pitchedhigh\.wordpress\.com\/" [R=301,L]
+

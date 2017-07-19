@@ -1,0 +1,235 @@
+/* Resume */
+html {
+	background-color: #afafaf;
+	color: #000;
+	padding: .75em;
+}
+body.hresume {
+	background-color: #fff;
+	color: #000;
+	font: 80% Verdana, Arial, Helvetica, sans-serif;	
+	padding: 3.25em;
+	margin: 0 auto;
+	border: 1px solid #000;
+	border-right-width: 3px;
+	border-bottom-width: 3px;
+	min-width: 50em;
+	max-width: 72em;
+}
+* html body.hresume {
+	width: 50em;
+}
+h1, h2 {
+	font-family: "Times New Roman", Times, serif;
+	font-variant: small-caps;
+	letter-spacing: .15em;
+}
+h1 {
+	font-size: 200%;
+	border-bottom: 3px double #000;
+	margin: 0;
+}
+h1 a {
+	background-color: #fff;
+	color: #000;
+	text-decoration: none;
+}
+h2 {
+	font-size: 150%;
+	border-bottom: 1px solid #000;
+	margin: 20px 0 0 0;
+}
+h3 {
+	font-size: 1em;
+	display: inline;
+	padding-right: .5em;
+	text-transform: uppercase;
+}
+
+.given-name:first-letter {
+	letter-spacing: 2px;
+}
+
+.experience > h3 {
+		margin-right: 0;
+}
+.education > h3 {
+		margin-right: 0;
+}
+.publication > h3 {
+		margin-right: 0;
+}
+h3:after { 
+	content: ", ";
+}
+h4 {
+	font-size: 1em;
+	margin-bottom: 0;
+}
+h4.title {
+  margin-left: 0em;
+  margin-top: 0.4em;  
+  padding-left: 1.5em;
+}
+li.experience > h4.title:before {
+  content: "‣ ";/* Role : "*/
+  cursor: pointer;
+}
+
+li.education > h4.title:before {
+  content: "‣ ";/* Degree : ";*/  
+}
+
+ul {
+	list-style-type: disc;
+}
+li { 
+	margin-bottom: .5em;
+}
+acronym {
+	cursor: default;
+}
+abbr { 
+	cursor: default;
+	border: none;
+}
+abbr:hover { 
+	cursor: default;
+	border-bottom: 1px dotted #000;
+}
+.type {
+	display: none;	
+}
+span.street-address, span.postal-code, div.tel { 
+	padding-right: .25em;
+}
+address > span.street-address, address > span.postal-code, div.vcard > div.tel { 
+	margin-right: 0;
+}
+span.street-address:after, span.postal-code:after, div.tel:after {
+	padding-left: .25em;
+	content: " \00B7 ";
+	font-weight: bold;
+	font-size: 1.1em;
+}
+span.additional-name  {
+	display: none;
+}
+address, div.email, div.tel { 
+	display: inline;
+	font-style: normal;
+}
+div.email a { 
+	background-color: #fff;
+	color: #000;
+	text-decoration: none;
+}
+div.email a span.value{ 
+	background-color: #fff;
+	color: #0000FF;
+	text-decoration: underline;
+}
+div.location { 
+	display: inline;
+}
+div.period { 
+	display: inline;
+	position: absolute;
+	right: 0;
+	border-bottom: 1px dashed #ccc;
+}
+* html div.period { 
+	right: 3.25em;
+}
+p.description {
+	margin-top: 0;
+	/* display: none; */
+}
+p.clients {
+	margin-top: 0;
+	/*display: none;*/
+	background-color: #fff;
+	color: #777;
+}
+p.misc {
+	font-weight: bold;
+	text-align: center;
+}
+ul.history {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+li.experience {
+	margin-bottom: 8px;
+	position: relative;
+}
+li.education {
+	margin-bottom: 8px;
+	position: relative;
+}
+li.publication {
+	margin-bottom: 8px;
+	position: relative;
+}
+ul.skills  {
+	list-style-type: none;
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+ul.skills li  {
+	margin: 0;
+	padding: 0;
+}
+ul.skillset {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+li.skillarea {
+	font-weight: bold;
+}
+ul.skillset li {
+	display: inline;
+	font-weight: normal;
+}
+ul.skillset li:after {
+	content: ", ";
+}
+ul.skillset li:last-child:after {
+	content: "";
+}
+object.include {
+	display: none;
+	width:0; 
+	height:0;
+}
+
+li.vcard > p {
+  padding-left: 1.5em;
+  margin-right: 10em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+a.url {
+	border-bottom: 0px dashed #ccc;
+	text-decoration: none;
+}
+
+a {
+	background-color: #fff;
+	color: #777;
+	border-bottom: 1px dashed #ccc;
+	text-decoration: none;
+}
+
+.printable {
+	display: none;
+}
+
+p.activities {
+	margin-left: 1.5em;
+	margin-top: 1em;
+}

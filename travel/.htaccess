@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^travel\.pitchedhigh\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.travel\.pitchedhigh\.com$
+RewriteRule ^/?$ "https\:\/\/gktoursandtravels\.wordpress\.com\/" [R=301,L]
+

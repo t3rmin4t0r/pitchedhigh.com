@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Kavita's Portfolio</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/jquery-photowall.js"></script> 
+<link rel="prefetch" href="http://pitchedhigh.com/portfolio/view/">
+<style type="text/css"> 
+/* <!-- include jquery-photowall.css --> */
+div.pw-photo {
+
+}
+div.pw-line {
+    float:left;
+    overflow:hidden;
+}
+div.pw-crop {
+    position: relative;
+    overflow: hidden;
+}
+div.pw-photo a {
+	text-decoration: none;
+	outline: none;
+	border: none;
+}
+div.pw-photo img {
+	background:white;
+	border:none;
+	outline: none;
+	zoom: 1;
+}
+.pw-photo-hover {
+	box-shadow: 		1px 1px 5px #333;			
+	-webkit-box-shadow:	1px 1px 5px #333;
+	-moz-box-shadow:	1px 1px 5px #333;
+}
+img.pw-photo-zoomed {
+	position: absolute;
+	z-index: 100;
+	background: white;
+	box-shadow: 		1px 1px 5px #333;			
+	-webkit-box-shadow:	1px 1px 5px #333;
+	-moz-box-shadow:	1px 1px 5px #333;
+}
+
+
+#showbox {
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    background:#000;
+    z-index: 1001;
+    overflow:hidden;
+}
+.unselect {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+#showbox-exit {
+    width:16px;
+    height:16px;
+    background: url(../images/exit.gif);
+    position:absolute;
+    right:10px;
+    top:10px;
+    z-index: 1002;
+    cursor:pointer;
+}
+#showbox-loader {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    width: 16px;
+    height: 16px;
+    background: #000 url(../images/loader.gif);
+    margin:-80px 0 0 -8px;
+}
+#showbox .showbox-image {
+    position:relative;
+}
+#showbox .showbox-image img {
+    cursor:pointer;
+}
+#showbox .showbox-menubar {
+    text-align: center;
+    width: 100%;
+    font-family: Arial,Tahoma,Serif;
+    color: #919191;
+    height: 35px;
+    position: relative;
+}
+#showbox .showbox-preview {
+    border-top:1px solid #181818;
+    background: #0A0A0A;
+    position:fixed;
+    height: 80px;
+    width:100%;
+    bottom:-75px;
+    left:0px;
+    padding: 5px 0 15px 0 ;
+    overflow:hidden;
+}
+#showbox .showbox-pv-lock {
+    width:13px;
+    height:9px;
+    background: url(../images/lock.gif);
+    position:absolute;
+    right:10px;
+    top:10px;
+    display:none;
+}
+#showbox .showbox-th-counter {
+    text-align:center;
+    color: #919191;
+    font-family: Arial,Tahoma,Serif;
+    font-size:12px;
+    height: 15px;
+    margin-bottom: 5px;
+}
+.showbox-th-container {
+    position:relative;
+    width: 90000px;
+}
+.showbox-th {
+    position: relative;
+    width:58px;
+    height:58px;
+    overflow:hidden;
+    float:left;
+    margin: 2px;
+    cursor:pointer;
+    border: 1px transparent solid;
+}
+#showbox .showbox-th img{
+    position: relative;
+}
+#showbox .showbox-th-active {
+    border: 1px #e5e5e5 solid;
+    cursor:default !important;
+}
+/* clearfix ----------------------------------------------------------------- */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } 
+html,body {
+	background:#ffffcc;
+}
+
+img {
+	padding: 4px;
+}
+#gallery {
+
+}
+
+#gallery img {
+	-webkit-transform: none;
+	-moz-transform: none;
+}
+
+#gallery img.even {
+	-webkit-transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+}
+
+#gallery img.third  {
+	-webkit-transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+}
+
+#gallery img.fifth {
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+}
+
+* {
+   padding:0;
+   margin: 0;
+   outline: none !important; 
+}
+
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover > #logo {
+	opacity: 1;
+	-webkit-transform: rotate(12deg);
+	-moz-transform: rotate(12deg);
+}
+
+#logo {
+	position: fixed;
+	top: 48pt;
+	left: 14pt;
+	opacity: 0.3;
+}
+
+
+</style>
+<script type="text/javascript">
+/* <!-- include thumbnails.js --> */
+var thumbnails = [{"h": 240, "thumbnail": "Akamai website.png", "w": 300}, {"h": 180, "thumbnail": "Kremlin_Billboard.png", "w": 240}, {"h": 240, "thumbnail": "Brand_Campaign_Concept.png", "w": 170}, {"h": 240, "thumbnail": "FabricSpa.png", "w": 300}, {"h": 240, "thumbnail": "Incredible India (Global).png", "w": 320}, {"h": 240, "thumbnail": "akamai dm.png", "w": 170}, {"h": 240, "thumbnail": "Visit India 2009.png", "w": 320}, {"h": 240, "thumbnail": "Flipbook.png", "w": 320}, {"h": 240, "thumbnail": "That_Indian_Drink.png", "w": 404}, {"h": 240, "thumbnail": "Child Labor Released Campaign.png", "w": 320}, {"h": 240, "thumbnail": "Do_Moment.png", "w": 310}, {"h": 240, "thumbnail": "Child Labor Pitch.png", "w": 320}, {"h": 240, "thumbnail": "Viral_The Choice.png", "w": 320}, {"h": 240, "thumbnail": "farm.png", "w": 246}, {"h": 240, "thumbnail": "Viral_The_Cemetery.png", "w": 320}, {"h": 240, "thumbnail": "OSS_DM.png", "w": 180}, {"h": 240, "thumbnail": "back to school.png", "w": 180}, {"h": 240, "thumbnail": "DLF.png", "w": 320}, {"h": 240, "thumbnail": "Girl-Child.png", "w": 320}, {"h": 240, "thumbnail": "Trappist monk sells a phone.png", "w": 320}, {"h": 240, "thumbnail": "Animal.png", "w": 320}, {"h": 240, "thumbnail": "Titan_Palace_Collection.png", "w": 180}, {"h": 240, "thumbnail": "Best Buy Brandstore Hero Banner_Zoom.png", "w": 353}, {"h": 240, "thumbnail": "Web_Banner_520.png", "w": 288}, {"h": 240, "thumbnail": "kUrb Magazine.png", "w": 320}, {"h": 240, "thumbnail": "Colt_Brand_Tutorial.png", "w": 320}, {"h": 240, "thumbnail": "Common Traffic Games.png", "w": 320}, {"h": 240, "thumbnail": "Puma_after_hour.png", "w": 419}, {"h": 240, "thumbnail": "Web_Banner_T420.png", "w": 288}, {"h": 240, "thumbnail": "April Fools Day.png", "w": 530}, {"h": 240, "thumbnail": "Notepad_Standee designs.png", "w": 180}, {"h": 240, "thumbnail": "No-ka-Baap.png", "w": 310}, {"h": 240, "thumbnail": "Elevenution.png", "w": 185}, {"h": 240, "thumbnail": "Internal_presentation.png", "w": 319}];
+$(document).ready(function(){
+    PhotoWall.init({
+        el:                 '#gallery'               // Gallery element
+        ,zoom:              true                     // Use zoom
+        ,zoomAction:        'mouseenter'             // Zoom on action
+        ,zoomTimeout:       500                      // Timeout before zoom
+        ,zoomDuration:      100                      // Zoom duration time
+        ,zoomImageBorder:   5                         // Zoomed image border size 
+        ,showBox:           true                     // Enavle fullscreen mode
+        ,showBoxSocial:     true                     // Show social buttons
+        ,padding:           5                        // padding between images in gallery
+        ,lineMaxHeight:     240                      // Max set height of pictures line
+        ,lineMaxHeightDynamic: true                  // Dynamic lineMaxHeight. If set to True,
+                                                     // then line height will be changing on 
+                                                     // resize, coressponding to 
+                                                     // baseScreenHeight param
+        ,baseScreenHeight:  960                      // Base screen size from wich calculating dynamic lineMaxHeight  
+    });
+
+	(function(data) {
+		    var photos = {}
+	        for(var i in data) {
+		        var e     = data[i];
+				var id    = i;
+		        var t1h   = e.h;
+		        var t1w   = e.w;
+				var	cdn   = "";
+				if(location.host.indexOf("pitchedhigh") !== -1) {
+					cdn   = "http://cdn" + (i % 4) +".pitchedhigh.com/portfolio/";
+				}
+		        var t1src = cdn+escape(e.thumbnail);
+		        
+		        var t2w   = Math.round(t1w * 1.5);
+		        var t2h   = Math.round(t1h * 1.5);
+
+		        var t2src = t1src;
+	            
+	            var bsrc  = "view/?file="+escape("../"+e.thumbnail.replace(".png", ".pdf"));
+	            var bw    = 0;			
+	            var bh    = 0;
+		        photos[id] = {id:id,img:bsrc,width:bw,height:bh,th:{src:t1src,width:t1w,height:t1h,zoom_src:t2src,zoom_factor:1.5}};
+	        }	
+		    PhotoWall.load(photos);
+	 })(thumbnails);
+	$("a").attr("target", "_blank");
+	$("img.pw-zoom").each(function(i) {
+		if(i > 0) {
+			if(i%2 == 0) { $(this).addClass("even");}
+			if(i%3 == 0) { $(this).addClass("third"); }
+			if(i%5 == 0) { $(this).addClass("fifth"); }
+		}
+	});
+});
+</script> 
+</head> 
+<body> 
+<div id="gallery" style="position: absolute; left:10%; right: 10%; top: 8%;"> 
+	<div class="body"> 
+	</div> 
+</div> 
+<a href="/"><img id="logo" src="/images/do-unto.png" width="150px" alt="Kavita Srinivasan"/></a>
+</body> 
+</html>
